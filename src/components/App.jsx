@@ -36,8 +36,7 @@ export const App = () => {
     setContacts(prevState => [...prevState, contact]);
 
     const array = localStorage.getItem('contacts');
-    const contactsArray = JSON.parse(array);
-    console.log('contactsArray', contactsArray);
+    const contactsArray = array ? JSON.parse(array) : [];
 
     localStorage.setItem(
       'contacts',
